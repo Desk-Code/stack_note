@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stack_note/modules/onboading/screen/onboading_screen.dart';
 
@@ -13,17 +14,17 @@ class NoteStash extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return MaterialApp(
+          return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Note Stash',
+       
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,
               fontFamily: GoogleFonts.poppins().fontFamily,
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
-              textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
+              
             ),
-            home: const OnBoadingScreen(),
+            home:  OnBoadingScreen(),
             // home: const SplashScreen(),
           );
         });
