@@ -38,7 +38,11 @@ dependencies:
   google_fonts: ^6.2.1
   get: ^4.6.6
   gif: ^2.3.0
+<<<<<<< HEAD
   flutter_animate: ^4.5.0
+=======
+  intl_phone_field: ^3.2.0
+>>>>>>> harsh
 
 dev_dependencies:
   flutter_test:
