@@ -1,11 +1,11 @@
-import 'dart:async';
+// import 'dart:async';
 
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
-class SpalshScreenController extends GetxController {
-  static void navigateToBoarding() {
-    Timer(const Duration(seconds: 4), () {
-      Get.off(() => const OnBoardingScreen());
-    });
-  }
-}
+// class SpalshScreenController extends GetxController {
+//   static void navigateToBoarding() {
+//     Timer(const Duration(seconds: 4), () {
+//       Get.off(() => const OnBoardingScreen());
+//     });
+//   }
+// }
