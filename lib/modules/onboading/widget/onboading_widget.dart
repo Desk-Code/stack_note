@@ -24,69 +24,70 @@ class IntroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25.w),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 50.h),
-              _imageContainer(),
-              SizedBox(height: 20.h),
-              if (title != null)
-                _animatedText(
-                  title!,
-                  textStyle: size30TextStyle(color: Colors.black),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 50.h),
+            _imageContainer(),
+            SizedBox(height: 20.h),
+            if (title != null)
+              _animatedText(
+                title!,
+                textStyle: size30TextStyle(color: Colors.black),
+              ),
+            _animatedDescription(firstDetail),
+            _animatedDescription(secondDetail),
+            Animate(
+              effects: const [
+                FadeEffect(
+                  duration: Duration(seconds: 1),
+                  delay: Duration(milliseconds: 500),
                 ),
-              _animatedDescription(firstDetail),
-              _animatedDescription(secondDetail),
-              Animate(
-                effects: const [
-                  FadeEffect(
-                    duration: Duration(seconds: 1),
-                    delay: Duration(milliseconds: 500),
-                  ),
-                  SlideEffect(
-                    begin: Offset(0, 0),
-                    duration: Duration(seconds: 2),
-                    curve: Curves.easeOut,
-                  ),
-                ],
-                child: button ?? SizedBox(height: 20.h),
-              )
-            ],
-          ),
+                SlideEffect(
+                  begin: Offset(0, 0),
+                  duration: Duration(seconds: 2),
+                  curve: Curves.easeOut,
+                ),
+              ],
+              child: button ?? SizedBox(height: 20.h),
+            )
+          ],
         ),
       ),
     );
   }
 
   Widget _imageContainer() {
-    return Container(
-      height: 350.h,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.vertical(bottom: Radius.circular(40.r)),
-        image: DecorationImage(
-          image: AssetImage(image),
-          fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Container(
+         
+        height: 350.h,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.vertical(bottom: Radius.circular(40.r)),
+          image: DecorationImage(
+            image: AssetImage(image),
+            fit: BoxFit.cover,
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black45,
+              blurRadius: 8,
+              spreadRadius: 1,
+              offset: Offset(4, 4),
+            ),
+            BoxShadow(
+              color: Color(0xff071E03),
+              blurRadius: 8,
+              spreadRadius: 1,
+              offset: Offset(-5, 1),
+            ),
+          ],
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black45,
-            blurRadius: 8,
-            spreadRadius: 1,
-            offset: Offset(4, 4),
-          ),
-          BoxShadow(
-            color: Color(0xff071E03),
-            blurRadius: 8,
-            spreadRadius: 1,
-            offset: Offset(-5, 1),
-          ),
-        ],
-      ),
-    ).animate().fade(duration: const Duration(seconds: 2));
+      ).animate().fade(duration: const Duration(seconds: 2)),
+    );
   }
 
   /// Animated welcome text
