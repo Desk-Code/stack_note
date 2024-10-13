@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stack_note/modules/login/controller/login.controller.dart';
 import 'package:stack_note/modules/onboading/screen/onboading_screen.dart';
 
 class NoteStash extends StatelessWidget {
@@ -21,9 +22,8 @@ class NoteStash extends StatelessWidget {
               fontFamily: GoogleFonts.poppins().fontFamily,
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
-              textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
             ),
-            home: const OnBoadingScreen(),
+            home: const LoginScreen(),
             // home: const SplashScreen(),
           );
         });
