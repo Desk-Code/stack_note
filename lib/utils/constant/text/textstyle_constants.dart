@@ -9,9 +9,25 @@ size30TextStyle({Color? color, FontWeight? fontWeight}) {
   );
 }
 
+size20TextStyle({Color? color, FontWeight? fontWeight}) {
+  return TextStyle(
+    fontSize: 20.sp,
+    color: color ?? Colors.black,
+    fontWeight: fontWeight ?? FontWeight.w600,
+  );
+}
+
 size18TextStyle({Color? color, FontWeight? fontWeight}) {
   return TextStyle(
     fontSize: 18.sp,
+    color: color ?? Colors.black,
+    fontWeight: fontWeight ?? FontWeight.normal,
+  );
+}
+
+size16TextStyle({Color? color, FontWeight? fontWeight}) {
+  return TextStyle(
+    fontSize: 16.sp,
     color: color ?? Colors.black,
     fontWeight: fontWeight ?? FontWeight.normal,
   );
