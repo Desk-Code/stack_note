@@ -2,7 +2,9 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
+import 'package:stack_note/modules/home/screen/home_screen.dart';
 import 'package:stack_note/utils/constant/text/textstyle_constants.dart';
 import 'package:stack_note/utils/widget/common_button.dart';
 
@@ -21,7 +23,7 @@ class VerificationScreen extends StatelessWidget {
       height: 50.h,
       textStyle: size20TextStyle(),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         border: Border.all(color: Colors.grey),
       ),
     );
@@ -69,22 +71,22 @@ class VerificationScreen extends StatelessWidget {
               children: [
                 Container(
                   margin: const EdgeInsets.only(bottom: 9),
-                  width: 22,
-                  height: 1,
+                  width: 22.w,
+                  height: 1.h,
                   color: focusedBorderColor,
                 ),
               ],
             ),
             focusedPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(8.r),
                 border: Border.all(color: focusedBorderColor),
               ),
             ),
             submittedPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
                 color: fillColor,
-                borderRadius: BorderRadius.circular(19),
+                borderRadius: BorderRadius.circular(19.r),
                 border: Border.all(color: focusedBorderColor),
               ),
             ),
@@ -98,7 +100,9 @@ class VerificationScreen extends StatelessWidget {
           commonButton(
             context,
             buttonTitle: "Verify",
-            onTap: () {},
+            onTap: () {
+              Get.offAll(() => const HomeScreen());
+            },
           )
         ],
       ),
