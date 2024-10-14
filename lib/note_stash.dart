@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:stack_note/modules/login/screen/login_screen.dart';
+import 'package:stack_note/modules/onboading/screen/onboading_screen.dart';
 
 class NoteStash extends StatelessWidget {
   const NoteStash({super.key});
@@ -16,14 +16,15 @@ class NoteStash extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Note Stash',
+       
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,
               fontFamily: GoogleFonts.poppins().fontFamily,
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,
+              
             ),
-            home: const LoginScreen(),
+            home:  OnBoadingScreen(),
             // home: const SplashScreen(),
           );
         });
