@@ -73,14 +73,14 @@ final OnBoadingController _onboadingController = Get.put(OnBoadingController());
               ],
             ),
           ),
-          indicator()
+          _indicator()
         ],
       ),
       )
     );
   }
 
-  Widget indicator() {
+  Widget _indicator() {
     return AspectRatio(
       aspectRatio: 1 / 0.2,
       child: Align(
@@ -113,14 +113,5 @@ final OnBoadingController _onboadingController = Get.put(OnBoadingController());
       
       
       
-  //     Scaffold(
-  //       body: IntroWidget(
-  //         image: "assets/images/intro1.jpg",
-  //         firstDetail: "Learn More!",
-  //         secondDetail: "wsdfghjk`fxfuhuaft hugskjuvhf7udjh wsjhgw7sa",
-  //         title: "Learn More!",
-  //       ),
-  //     ),
-  //   );
-  // }
+
 }
