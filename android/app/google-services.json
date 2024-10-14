@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "206521268137",
+    "project_id": "notestash-e7dfa",
+    "storage_bucket": "notestash-e7dfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206521268137:android:31f845cc24c22f34db36b8",
+        "android_client_info": {
+          "package_name": "com.example.stack_note"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsUXNf5X5vXtYBIaImFwN357BfUehza6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
